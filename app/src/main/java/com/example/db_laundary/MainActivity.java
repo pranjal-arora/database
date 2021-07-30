@@ -23,16 +23,16 @@ public class MainActivity extends AppCompatActivity {
         DbHandler db= new DbHandler(MainActivity.this);
 
         //adding a contact
-//        contact pranjal = new contact();
-//        pranjal.setName("Pranjal Arora");
-//        pranjal.setPass("1234");
-//        pranjal.setTshirt(2);
-//        pranjal.setShirt(3);
-//        pranjal.setTrouser(2);
-//        pranjal.setWoollen(1);
-//        pranjal.setTime("5:00 pm");
-//
-//        db.addContact(pranjal);
+        contact pranjal = new contact();
+        pranjal.setName("Pranjal Arora");
+        pranjal.setPass("1234");
+        pranjal.setTshirt(2);
+        pranjal.setShirt(3);
+        pranjal.setTrouser(2);
+        pranjal.setWoollen(1);
+        pranjal.setTime("5:00 pm");
+
+        db.addContact(pranjal);
 
         ArrayList<String> contacts = new ArrayList<>();
         listView = findViewById(R.id.listView);
