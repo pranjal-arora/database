@@ -34,6 +34,17 @@ public class MainActivity extends AppCompatActivity {
 
         db.addContact(pranjal);
 
+        contact pranjal2 = new contact();
+        pranjal2.setName("Pranjal Arora");
+        pranjal2.setPass("21234");
+        pranjal2.setTshirt(2);
+        pranjal2.setShirt(3);
+        pranjal2.setTrouser(2);
+        pranjal2.setWoollen(1);
+        pranjal2.setTime("6:00 pm");
+
+        db.addContact(pranjal2);
+
         ArrayList<String> contacts = new ArrayList<>();
         listView = findViewById(R.id.listView);
 
