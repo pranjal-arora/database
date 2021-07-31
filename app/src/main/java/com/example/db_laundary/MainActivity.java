@@ -37,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<String> contacts = new ArrayList<>();
         listView = findViewById(R.id.listView);
 
+//        List<contact> contactchecker= db.checkContact();
+//        for(contact contact : contactchecker){
+//
+//        }
         List<contact> allContacts = db.getAllContacts();
         for(contact contact: allContacts){
             Log.d("dbdb", "name:" + contact.getName()+ "with the student id" + contact.getS_id() + "has a slot" + contact.getTime()+ "\n");
@@ -53,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
 
 
 }

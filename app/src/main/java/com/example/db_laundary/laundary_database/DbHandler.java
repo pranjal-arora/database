@@ -45,6 +45,31 @@ public class DbHandler extends SQLiteOpenHelper {
 
     }
 
+//    public void checkContact(contact contact){
+//       SQLiteDatabase db= this.getReadableDatabase();
+//
+//    }
+
+    public List<contact> checkContact(){
+        List<contact> namepass= new ArrayList<>();
+        SQLiteDatabase db= this.getReadableDatabase();
+
+        String select1 = "SELECT " + params.KEY_NAME+ "," + params.KEY_PASS + " FROM " + params.TABLE_NAME ;
+        Cursor cursor = db.rawQuery(select1,null);
+        if(cursor.moveToFirst()){
+            do{
+                contact contact = new contact();
+                contact.setName(cursor.getString(1));
+                contact.setPass(cursor.getString(2));
+
+                namepass.add(contact);
+
+            }while(cursor.moveToNext()); }
+
+        return namepass;
+    }
+
+
     public List<contact> getAllContacts(){
         List<contact> contactList= new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
